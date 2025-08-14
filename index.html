@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rolling Dice Apparel - Premium Urban Fashion</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h1 class="logo">🎲 ROLLING DICE</h1>
+          <span class="tagline">APPAREL</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#catalogue" class="nav-link">Catalogue</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">ROLL THE DICE</h1>
+        <h2 class="hero-subtitle">ON PREMIUM STYLE</h2>
+        <p class="hero-description">Discover our exclusive collection of urban fashion that defines your unique style</p>
+        <button class="cta-button" onclick="scrollToSection('catalogue')">EXPLORE CATALOGUE</button>
+      </div>
+      <div class="hero-image">
+        <div class="dice-animation">🎲</div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">ABOUT ROLLING DICE APPAREL</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-description">
+              Founded in 2025, Rolling Dice Apparel emerged from a vision to revolutionize urban fashion. 
+              We believe that style is a gamble worth taking, and every piece in our collection represents 
+              a bold statement of individuality and confidence.
+            </p>
+            <p class="about-description">
+              Our brand philosophy centers around the idea that fashion is about taking risks and expressing 
+              your authentic self. From premium tracksuits to statement hoodies, each item is carefully 
+              crafted to embody the spirit of those who dare to be different.
+            </p>
+            <div class="founders">
+              <h3>Meet Our Founders</h3>
+              <div class="founder-cards">
+                <div class="founder-card">
+                  <h4>Paballo Motjela</h4>
+                  <p>Co-Founder & Creative Director</p>
+                  <div class="founder-bio">
+                    <p>Paballo brings a unique vision to urban fashion with over 8 years of experience in design and brand development. Growing up in Johannesburg, he developed a passion for street culture and fashion that speaks to the youth. His creative genius lies in blending contemporary streetwear with premium quality materials, creating pieces that are both stylish and durable. Paballo's design philosophy centers around empowering individuals to express their authentic selves through bold fashion choices.</p>
+                  </div>
+                </div>
+                <div class="founder-card">
+                  <h4>Chef Otis</h4>
+                  <p>Co-Founder & Operations Manager</p>
+                  <div class="founder-bio">
+                    <p>Chef Otis is the operational backbone of Rolling Dice Apparel, bringing 6 years of business management and logistics expertise to the brand. Known for his meticulous attention to detail and customer-first approach, he ensures that every aspect of the business runs smoothly from supply chain management to customer service. His background in hospitality has instilled in him the importance of exceptional service, which he has seamlessly integrated into the fashion retail experience. Chef's strategic thinking and operational excellence have been instrumental in establishing Rolling Dice Apparel as a trusted premium brand.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogue Section -->
+    <section id="catalogue" class="catalogue">
+      <div class="container">
+        <h2 class="section-title">OUR CATALOGUE</h2>
+        
+        <!-- Category Navigation -->
+        <div class="category-nav">
+          <button class="category-btn active" data-category="all">ALL ITEMS</button>
+          <button class="category-btn" data-category="tracksuits">TRACKSUITS</button>
+          <button class="category-btn" data-category="hoodies">HOODIES</button>
+          <button class="category-btn" data-category="tshirts">T-SHIRTS</button>
+          <button class="category-btn" data-category="beanies">BEANIES & HATS</button>
+          <button class="category-btn" data-category="caps">CAPS</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid">
+          <!-- Products will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img id="modal-img" src="" alt="">
+          </div>
+          <div class="modal-info">
+            <h3 id="modal-title"></h3>
+            <p id="modal-price"></p>
+            <p id="modal-description"></p>
+            <div class="modal-sizes">
+              <h4>Available Sizes:</h4>
+              <div id="modal-sizes-list"></div>
+            </div>
+            <button class="order-btn" id="order-btn">ORDER VIA EMAIL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">GET IN TOUCH</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Ready to Roll the Dice?</h3>
+            <p>Contact us to place your order or for any inquiries about our premium collection.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <strong>Email:</strong> orders@rollingdiceapparel.com
+              </div>
+              <div class="contact-item">
+                <strong>Phone:</strong> +27 123 456 789
+              </div>
+              <div class="contact-item">
+                <strong>Founded:</strong> 2025
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>ROLLING DICE APPAREL</h3>
+            <p>Premium Urban Fashion Since 2025</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#catalogue">Catalogue</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p>orders@rollingdiceapparel.com</p>
+            <p>+27 123 456 789</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Rolling Dice Apparel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
